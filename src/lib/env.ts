@@ -12,9 +12,10 @@ if (GA4_ID && !/^G-[A-Z0-9]{6,12}$/.test(GA4_ID)) {
   throw new Error(`PUBLIC_GA4_ID is not a GA4 measurement ID: "${GA4_ID}"`);
 }
 
-// The family's inbox. Used only until PUBLIC_FORM_ENDPOINT carries FormSubmit's alias for it (family rule:
-// post to the alias, not the raw address). CI passes an unset variable as an empty string, hence `||`.
-const DEFAULT_FORM_ENDPOINT = 'https://formsubmit.co/ajax/lyj898@gmail.com';
+// FormSubmit's alias for the family inbox (family rule: post to the alias, never the raw address). The user
+// confirmed it reaches the inbox on 5 Oct 2026. CI sets the same value as PUBLIC_FORM_ENDPOINT; this default keeps
+// local builds identical. CI passes an unset variable as an empty string, hence `||`.
+const DEFAULT_FORM_ENDPOINT = 'https://formsubmit.co/1aacc4903352135bb0fa38c3987d3abd';
 const rawEndpoint = clean(import.meta.env['PUBLIC_FORM_ENDPOINT']) || DEFAULT_FORM_ENDPOINT;
 
 /** FormSubmit's AJAX endpoint, which answers in JSON. A plain FormSubmit URL (an alias) is converted. */

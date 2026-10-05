@@ -44,8 +44,8 @@ Relocado's: hubs, guides, and an enquiry form.
 ## Enquiries
 
 - `src/components/EnquiryForm.astro` posts to FormSubmit's AJAX endpoint from `PUBLIC_FORM_ENDPOINT` (a repo
-  variable). Until it's set, it falls back to the family inbox's raw address in `src/lib/env.ts`; the family rule
-  is to post to FormSubmit's alias, so set the variable to the alias.
+  variable), set on 5 Oct 2026 to FormSubmit's alias for the family inbox. `src/lib/env.ts` falls back to the same
+  alias, so no email address appears in the code or the pages.
 - Fields: property type, timing, rooms or works, details, optional budget range, name, phone or WhatsApp. The
   subject carries "SpaceToReno", the page title and path. The PDPA notice says the details go to the team behind
   Junk to Clear. If the fields or recipient change, update the notice and `/about/#privacy` in the same commit.
