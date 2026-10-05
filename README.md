@@ -35,7 +35,10 @@ Relocado's: hubs, guides, and an enquiry form.
   "after-renovation checklist"; link its checklist for the move-in side, as a sister guide.
 - Brand links: at most two per guide, only at the step that needs the service, and disclosed in the sentence. Never
   "our crew", never rank or review our own brands, no "best ID / contractor" lists, no `rel="noreferrer"`.
-- No sitewide or footer links to family sites (they come in the revamp). No phone number, WhatsApp or email.
+- Family revamp (5 Oct 2026, `../jtc-family/briefs/family-revamp.md`): the only footer link is "Part of OurKampung"
+  to `https://ourkampung.com/` with `rel="nofollow"`, and `/about/` has one sentence linking
+  `https://ourkampung.com/our-sites/`. No other sitewide links to family sites, and none between sister sites.
+  No phone number, WhatsApp or email.
 - British spelling, plain English, answer first.
 
 ## Enquiries
@@ -51,7 +54,9 @@ Relocado's: hubs, guides, and an enquiry form.
 
 ## Measurement
 
-GA4 renders only when `PUBLIC_GA4_ID` is set at build time (a repo variable; the coordinator creates the property).
+GA4 property "SpaceToReno" (557318329), stream 16043330293, measurement ID `G-JVTF9S8TBR`, set as the repo
+variable `PUBLIC_GA4_ID` (5 Oct 2026). The tag renders only when that variable is set at build time, and the audit
+then fails any page without it. Search Console: `sc-domain:spacetoreno.com`.
 `generate_lead` is the only key event. Keep enhanced measurement on: outbound clicks count readers sent to the brands.
 
 ## Design

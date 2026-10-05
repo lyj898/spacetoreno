@@ -87,7 +87,8 @@ footer.site .footer-grid { display: grid; grid-template-columns: minmax(0, 1.4fr
 footer.site .footer-about p { margin-top: 12px; max-width: 540px; line-height: 1.6; }
 footer.site .footer-about p a { border-bottom-color: var(--color-accent); }
 footer.site .footer-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 24px; align-content: start; }
-footer.site .footer-base { margin-top: 28px; font-size: 0.8rem; }
+footer.site .footer-base { margin-top: 28px; font-size: 0.8rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+footer.site .footer-family a { border-bottom-color: var(--color-accent); }
 @media (max-width: 720px) { footer.site .footer-grid { grid-template-columns: 1fr; gap: 28px; } }
 
 /* ---- Breadcrumbs and page header ---- */
