@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420">
+<rect x="0" y="0" width="960" height="420" rx="18" fill="#FFFDF8"/>
+  <path d="M480 30v360" stroke="#E6DCCB" stroke-width="3" stroke-dasharray="6 8"/>
+  <!-- left: interior designer -->
+  <text x="240" y="48" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#3B2752" text-anchor="middle">Interior designer</text>
+  <text x="240" y="72" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" fill="#4E4558" text-anchor="middle">Designs the space, then manages the trades</text>
+  <path d="M60 210C50 150 110 110 200 110c70 0 100 40 96 96-4 50-50 70-110 70-64 0-116-12-126-66z" fill="#EDE6F3"/>
+  <rect x="78" y="128" width="96" height="70" rx="4" fill="#FFFFFF"/>
+  <rect x="88" y="138" width="34" height="24" fill="#8FD3B6"/><rect x="128" y="138" width="36" height="24" fill="#F0A07E"/>
+  <rect x="88" y="168" width="20" height="20" fill="#D9A86C"/><rect x="114" y="168" width="50" height="20" fill="#CDBFDD"/>
+  <ellipse cx="222" cy="302" rx="30" ry="4.5" fill="#DCD2E6"/>
+  <rect x="210" y="254" width="10" height="44" rx="4" fill="#2A2233"/>
+  <rect x="224" y="254" width="10" height="44" rx="4" fill="#2A2233"/>
+  <rect x="206" y="294" width="16" height="7" rx="3" fill="#2A2233"/>
+  <rect x="223" y="294" width="16" height="7" rx="3" fill="#2A2233"/>
+  <rect x="204" y="208" width="36" height="52" rx="13" fill="#6B4F8A"/>
+  <rect x="195" y="216" width="10" height="34" rx="5" fill="#6B4F8A"/>
+           <path d="M240 220l20 18" stroke="#6B4F8A" stroke-width="10" stroke-linecap="round"/>
+           <rect x="252" y="226" width="30" height="38" rx="3" fill="#FFFFFF" stroke="#CDBFDD" stroke-width="2"/>
+           <path d="M258 236h18M258 244h18M258 252h10" stroke="#A59FAB" stroke-width="2"/>
+           <circle cx="200" cy="252" r="5" fill="#F3CDB3"/>
+  <circle cx="222" cy="194" r="14" fill="#F3CDB3"/>
+  <path d="M208 194a14 14 0 0 1 28 0c-6-6-22-7-28 0z" fill="#9E6E3E"/>
+  <path d="M300 170c30-6 48-2 60 6M300 222h58M300 268c26 6 44 6 58 0" stroke="#6B4F8A" stroke-width="2.5" fill="none" stroke-dasharray="4 5"/>
+  <rect x="352" y="159" width="116" height="34" rx="17" fill="#F1E2C4"/>
+  <text x="410" y="181" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" fill="#2A2233" text-anchor="middle">Carpenter</text>
+  <rect x="352" y="205" width="116" height="34" rx="17" fill="#F5D98B"/>
+  <text x="410" y="227" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" fill="#2A2233" text-anchor="middle">Electrician</text>
+  <rect x="352" y="251" width="116" height="34" rx="17" fill="#DCEBF0"/>
+  <text x="410" y="273" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" fill="#2A2233" text-anchor="middle">Tiler, plumber</text>
+  <text x="240" y="352" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" fill="#2A2233" text-anchor="middle">You deal with one firm for design and build.</text>
+  <text x="240" y="374" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" fill="#2A2233" text-anchor="middle">Its quote covers the design work too.</text>
+  <!-- right: contractor -->
+  <text x="720" y="48" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#3B2752" text-anchor="middle">Renovation contractor</text>
+  <text x="720" y="72" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" fill="#4E4558" text-anchor="middle">Builds what you’ve already decided</text>
+  <path d="M540 210C530 150 590 110 680 110c70 0 100 40 96 96-4 50-50 70-110 70-64 0-116-12-126-66z" fill="#D7F0E4"/>
+  <ellipse cx="612" cy="302" rx="30" ry="4.5" fill="#DCD2E6"/>
+  <rect x="600" y="254" width="10" height="44" rx="4" fill="#3B2752"/>
+  <rect x="614" y="254" width="10" height="44" rx="4" fill="#3B2752"/>
+  <rect x="596" y="294" width="16" height="7" rx="3" fill="#2A2233"/>
+  <rect x="613" y="294" width="16" height="7" rx="3" fill="#2A2233"/>
+  <rect x="594" y="208" width="36" height="52" rx="13" fill="#F0A07E"/>
+  <rect x="585" y="216" width="10" height="34" rx="5" fill="#F0A07E"/>
+           <path d="M630 222l24 6" stroke="#F0A07E" stroke-width="10" stroke-linecap="round"/>
+           <rect x="652" y="206" width="40" height="30" rx="3" fill="#FFFFFF" stroke="#CDBFDD" stroke-width="2"/>
+           <path d="M660 214h12v14h-12zM672 214h12v8h-12z" fill="none" stroke="#6B4F8A" stroke-width="1.6"/>
+           <circle cx="590" cy="252" r="5" fill="#F3CDB3"/>
+  <circle cx="612" cy="194" r="14" fill="#F3CDB3"/>
+  <path d="M598 194a14 14 0 0 1 28 0c-6-6-22-7-28 0z" fill="#2A2233"/>
+  <ellipse cx="752" cy="302" rx="30" ry="4.5" fill="#DCD2E6"/>
+  <rect x="740" y="254" width="10" height="44" rx="4" fill="#59606E"/>
+  <rect x="754" y="254" width="10" height="44" rx="4" fill="#59606E"/>
+  <rect x="736" y="294" width="16" height="7" rx="3" fill="#2A2233"/>
+  <rect x="753" y="294" width="16" height="7" rx="3" fill="#2A2233"/>
+  <rect x="734" y="208" width="36" height="52" rx="13" fill="#5FB592"/>
+  <rect x="725" y="216" width="10" height="34" rx="5" fill="#5FB592"/>
+           <rect x="769" y="216" width="10" height="34" rx="5" fill="#5FB592"/>
+           <rect x="736" y="248" width="34" height="8" rx="3" fill="#9E6E3E"/>
+           <rect x="740" y="252" width="6" height="12" fill="#59606E"/><rect x="756" y="252" width="5" height="14" fill="#E3BE5E"/>
+           <circle cx="774" cy="252" r="5" fill="#B97B52"/><circle cx="730" cy="252" r="5" fill="#B97B52"/>
+  <circle cx="752" cy="194" r="14" fill="#B97B52"/>
+  <path d="M736 191a16 16 0 0 1 32 0z" fill="#F5D98B"/><rect x="733" y="189" width="38" height="5" rx="2.5" fill="#E3BE5E"/>
+  <path d="M676 248h40" stroke="#3B2752" stroke-width="3" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#3B2752"/></marker></defs>
+  <text x="720" y="352" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" fill="#2A2233" text-anchor="middle">You bring the design, or keep it simple.</text>
+  <text x="720" y="374" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" fill="#2A2233" text-anchor="middle">You make more of the decisions yourself.</text>
+</svg>

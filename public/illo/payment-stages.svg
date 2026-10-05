@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" width="960" height="320">
+<rect x="0" y="0" width="960" height="320" rx="18" fill="#FFFDF8"/>
+  <text x="40" y="44" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" fill="#4E4558">Work done</text>
+  <rect x="40" y="58" width="880" height="22" rx="11" fill="#EDE6F3"/>
+  <rect x="40" y="58" width="880" height="22" rx="11" fill="url(#prog)"/>
+  <defs><linearGradient id="prog" x1="0" x2="1"><stop offset="0" stop-color="#8FD3B6"/><stop offset="1" stop-color="#5FB592"/></linearGradient></defs>
+  <path d="M110 82v54" stroke="#3B2752" stroke-width="2.5" stroke-dasharray="4 4"/>
+  <circle cx="110" cy="69" r="9" fill="#FFFFFF" stroke="#3B2752" stroke-width="3"/>
+  <ellipse cx="110" cy="186" rx="18" ry="6" fill="#E3BE5E"/><ellipse cx="110" cy="179" rx="18" ry="6" fill="#E3BE5E"/><ellipse cx="110" cy="172" rx="18" ry="6" fill="#F5D98B"/>
+  <rect x="84" y="186" width="52" height="34" rx="6" fill="#6B4F8A"/>
+  <rect x="100" y="192" width="20" height="5" rx="2.5" fill="#3B2752"/>
+  <text x="110" y="252" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#2A2233" text-anchor="middle">Deposit</text>
+  <text x="110" y="274" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#2A2233" text-anchor="middle">when you sign</text>
+  <path d="M340 82v54" stroke="#3B2752" stroke-width="2.5" stroke-dasharray="4 4"/>
+  <circle cx="340" cy="69" r="9" fill="#FFFFFF" stroke="#3B2752" stroke-width="3"/>
+  <ellipse cx="340" cy="186" rx="18" ry="6" fill="#E3BE5E"/><ellipse cx="340" cy="179" rx="18" ry="6" fill="#E3BE5E"/><ellipse cx="340" cy="172" rx="18" ry="6" fill="#F5D98B"/>
+  <rect x="314" y="186" width="52" height="34" rx="6" fill="#6B4F8A"/>
+  <rect x="330" y="192" width="20" height="5" rx="2.5" fill="#3B2752"/>
+  <text x="340" y="252" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#2A2233" text-anchor="middle">Hacking and</text>
+  <text x="340" y="274" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#2A2233" text-anchor="middle">wet works done</text>
+  <path d="M570 82v54" stroke="#3B2752" stroke-width="2.5" stroke-dasharray="4 4"/>
+  <circle cx="570" cy="69" r="9" fill="#FFFFFF" stroke="#3B2752" stroke-width="3"/>
+  <ellipse cx="570" cy="186" rx="18" ry="6" fill="#E3BE5E"/><ellipse cx="570" cy="179" rx="18" ry="6" fill="#E3BE5E"/><ellipse cx="570" cy="172" rx="18" ry="6" fill="#F5D98B"/>
+  <rect x="544" y="186" width="52" height="34" rx="6" fill="#6B4F8A"/>
+  <rect x="560" y="192" width="20" height="5" rx="2.5" fill="#3B2752"/>
+  <text x="570" y="252" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#2A2233" text-anchor="middle">Carpentry and</text>
+  <text x="570" y="274" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#2A2233" text-anchor="middle">fittings in</text>
+  <path d="M800 82v54" stroke="#3B2752" stroke-width="2.5" stroke-dasharray="4 4"/>
+  <circle cx="800" cy="69" r="9" fill="#FFFFFF" stroke="#3B2752" stroke-width="3"/>
+  <ellipse cx="800" cy="186" rx="18" ry="6" fill="#E3BE5E"/><ellipse cx="800" cy="179" rx="18" ry="6" fill="#F5D98B"/>
+  <rect x="774" y="186" width="52" height="34" rx="6" fill="#6B4F8A"/>
+  <rect x="790" y="192" width="20" height="5" rx="2.5" fill="#3B2752"/>
+  <text x="800" y="252" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#2A2233" text-anchor="middle">Final payment</text>
+  <text x="800" y="274" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#2A2233" text-anchor="middle">after defects fixed</text>
+  <text x="480" y="308" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" fill="#4E4558" text-anchor="middle">Each payment follows work you can see. Your contract sets the amounts.</text>
+</svg>

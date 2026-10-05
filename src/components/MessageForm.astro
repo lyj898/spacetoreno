@@ -1,0 +1,96 @@
+---
+/**
+ * Corrections and privacy requests: the site shows no email address, so this is how readers reach the
+ * editors. Same FormSubmit endpoint as the enquiry form, but it is not a lead: it sends no GA4 event.
+ */
+import { FORM_ENDPOINT } from '../lib/env';
+
+const config = { endpoint: FORM_ENDPOINT };
+---
+<section class="enquiry enquiry-quiet" id="message" aria-labelledby="message-title" data-message>
+  <h2 id="message-title">Spotted a mistake, or a privacy request?</h2>
+  <p class="enquiry-lede">
+    Tell us what’s wrong and where, or what you’d like done with details you sent us. Add a way to reach you if
+    you’d like a reply.
+  </p>
+  <form class="enquiry-form" novalidate data-message-form>
+    <div class="enquiry-grid">
+      <label>
+        <span>About</span>
+        <select name="About" required>
+          <option value="A correction to a guide">A correction to a guide</option>
+          <option value="A privacy request">A privacy request (see, correct or delete my details)</option>
+          <option value="Something else">Something else</option>
+        </select>
+      </label>
+      <label>
+        <span>Phone, WhatsApp or email <small>(optional)</small></span>
+        <input name="Reply to" type="text" autocomplete="email" />
+      </label>
+      <label class="enquiry-wide">
+        <span>Your message</span>
+        <textarea name="Message" rows="4" required></textarea>
+      </label>
+    </div>
+    <input class="enquiry-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <button class="btn btn-outline" type="submit" data-message-submit>Send message</button>
+    <p class="enquiry-status" role="status" aria-live="polite" data-message-status hidden></p>
+  </form>
+  <div class="enquiry-success" hidden data-message-success tabindex="-1">
+    <p class="enquiry-success-title">Thank you. Your message is on its way.</p>
+  </div>
+</section>
+
+<script is:inline define:vars={{ config }}>
+  (function () {
+    var section = document.currentScript && document.currentScript.previousElementSibling;
+    if (!section || !section.hasAttribute('data-message')) return;
+    var form = section.querySelector('[data-message-form]');
+    var submit = section.querySelector('[data-message-submit]');
+    var status = section.querySelector('[data-message-status]');
+    var success = section.querySelector('[data-message-success]');
+
+    function show(message, isError) {
+      status.textContent = message;
+      status.hidden = false;
+      status.classList.toggle('is-error', !!isError);
+    }
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var data = {};
+      new FormData(form).forEach(function (value, key) { data[key] = String(value).trim(); });
+      if (data._honey) { form.hidden = true; success.hidden = false; return; }
+      delete data._honey;
+      if (!data.Message) { show('Please write your message.', true); return; }
+
+      data._subject = 'SpaceToReno message: ' + data.About;
+      data._template = 'table';
+      data['Reply to'] = data['Reply to'] || 'Not given';
+      data.Site = 'spacetoreno.com';
+      submit.disabled = true;
+      show('Sending…', false);
+
+      fetch(config.endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data),
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          return res.json();
+        })
+        .then(function (reply) {
+          var ok = reply && (reply.success === true || reply.success === 'true');
+          if (!ok) throw new Error('rejected');
+          form.hidden = true;
+          success.hidden = false;
+          success.focus({ preventScroll: true });
+        })
+        .catch(function () {
+          submit.disabled = false;
+          show('Sorry, your message didn’t send. Everything you typed is still here: please try again in a few minutes.', true);
+        });
+    });
+  })();
+</script>

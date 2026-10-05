@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 300" width="1100" height="300">
+<rect x="0" y="0" width="1100" height="300" rx="18" fill="#FFFDF8"/>
+  <path d="M90 130H1010" stroke="#CDBFDD" stroke-width="6" stroke-linecap="round"/>
+  <path d="M90 130H1010" stroke="#3B2752" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 16"/>
+  <circle cx="92" cy="130" r="58" fill="#EDE6F3" />
+  <rect x="66" y="110" width="52" height="40" rx="3" fill="#FFFFFF"/>
+        <path d="M74 118h18v14h-18zM92 118h18v24h-18z" fill="none" stroke="#6B4F8A" stroke-width="2.5"/>
+        <path d="M106 152l16-30 5 3-16 30z" fill="#E3BE5E"/>
+  <circle cx="50" cy="88" r="16" fill="#3B2752"/>
+  <text x="50" y="94" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="92" y="222" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#2A2233" text-anchor="middle">Plan</text>
+  <text x="92" y="246" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#2A2233" text-anchor="middle">and budget</text>
+  <circle cx="275" cy="130" r="58" fill="#EDE6F3" />
+  <circle cx="263" cy="122" r="9" fill="#F3CDB3"/><rect x="251" y="132" width="24" height="20" rx="8" fill="#F0A07E"/>
+        <circle cx="288" cy="122" r="9" fill="#B97B52"/><rect x="276" y="132" width="24" height="20" rx="8" fill="#5FB592"/>
+        <path d="M271 140h8" stroke="#2A2233" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="233" cy="88" r="16" fill="#3B2752"/>
+  <text x="233" y="94" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="275" y="222" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#2A2233" text-anchor="middle">Hire a designer</text>
+  <text x="275" y="246" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#2A2233" text-anchor="middle">or contractor</text>
+  <circle cx="458" cy="130" r="58" fill="#D7F0E4" stroke="#5FB592" stroke-width="3"/>
+  <rect x="438" y="106" width="40" height="48" rx="3" fill="#FFFFFF"/>
+        <path d="M446 116h24M446 124h24M446 132h14" stroke="#A59FAB" stroke-width="2.5"/>
+        <circle cx="472" cy="146" r="11" fill="#5FB592"/><path d="M467 146l4 4 6-8" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="416" cy="88" r="16" fill="#3B2752"/>
+  <text x="416" y="94" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="458" y="222" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#2A2233" text-anchor="middle">Get the</text>
+  <text x="458" y="246" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#2A2233" text-anchor="middle">approvals</text>
+  <circle cx="641" cy="130" r="58" fill="#EDE6F3" />
+  <rect x="615" y="116" width="52" height="28" fill="#DCEBF0"/><path d="M628 116v28" stroke="#BBD3DC" stroke-width="1.5"/><path d="M641 116v28" stroke="#BBD3DC" stroke-width="1.5"/><path d="M654 116v28" stroke="#BBD3DC" stroke-width="1.5"/><path d="M615 130h52" stroke="#BBD3DC" stroke-width="1.5"/>
+        <path d="M635 116l6 10-8 6 6 12" stroke="#2A2233" stroke-width="2" fill="none"/>
+        <path d="M645 102l18 22" stroke="#9E6E3E" stroke-width="5" stroke-linecap="round"/><rect x="653" y="94" width="22" height="11" rx="3" fill="#59606E" transform="rotate(40 664 100)"/>
+  <circle cx="599" cy="88" r="16" fill="#3B2752"/>
+  <text x="599" y="94" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="641" y="222" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#2A2233" text-anchor="middle">Hacking and</text>
+  <text x="641" y="246" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#2A2233" text-anchor="middle">wet works</text>
+  <circle cx="824" cy="130" r="58" fill="#EDE6F3" />
+  <rect x="800" y="108" width="48" height="44" rx="3" fill="#D9A86C"/>
+        <path d="M824 108v44M800 130h48" stroke="#C4935A" stroke-width="2.5"/>
+        <rect x="818" y="116" width="3" height="10" rx="1.5" fill="#3B2752"/><rect x="827" y="116" width="3" height="10" rx="1.5" fill="#3B2752"/>
+        <path d="M840 156l14-20 6 4-14 20z" fill="#8FD3B6"/>
+  <circle cx="782" cy="88" r="16" fill="#3B2752"/>
+  <text x="782" y="94" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="824" y="222" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#2A2233" text-anchor="middle">Carpentry, fittings</text>
+  <text x="824" y="246" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#2A2233" text-anchor="middle">and painting</text>
+  <circle cx="1007" cy="130" r="58" fill="#EDE6F3" />
+  <circle cx="999" cy="126" r="12" fill="none" stroke="#E3BE5E" stroke-width="6"/>
+        <path d="M1009 134l20 18M1021 145l6-6M1026 150l5-5" stroke="#E3BE5E" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="965" cy="88" r="16" fill="#3B2752"/>
+  <text x="965" y="94" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <text x="1007" y="222" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#2A2233" text-anchor="middle">Handover</text>
+  <text x="1007" y="246" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#2A2233" text-anchor="middle">and defects</text>
+</svg>

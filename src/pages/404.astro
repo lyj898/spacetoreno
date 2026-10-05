@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { HUBS, HUB_ORDER, hubUrl } from '../lib/site';
+---
+<BaseLayout
+  title="Page Not Found | SpaceToReno"
+  description="This page doesn’t exist. SpaceToReno is a guide to renovating a home in Singapore: planning, permits, hiring, the works and each room."
+  noindex
+>
+  <div class="page-header">
+    <div class="wrap">
+      <span class="kicker">Page not found</span>
+      <h1>This page doesn’t exist</h1>
+      <p class="lede">It may have moved. Pick a section, or <a class="inline-link" href="/guides/">see every guide</a>.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="wrap">
+      <div class="hub-grid">
+        {HUB_ORDER.map((key) => (
+          <a class="hub-card" href={hubUrl(key)}>
+            <img src={`/illo/${HUBS[key].illo}.svg`} alt="" width="320" height="220" loading="lazy" />
+            <div class="hub-card-body">
+              <h3>{HUBS[key].title.split(':')[0]}</h3>
+              <p>{HUBS[key].lede}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

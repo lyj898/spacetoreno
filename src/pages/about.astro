@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import EnquiryForm from '../components/EnquiryForm.astro';
+import MessageForm from '../components/MessageForm.astro';
+import { SITE } from '../lib/site';
+import { breadcrumbNode } from '../lib/schema';
+
+const pageUrl = `${SITE.url}/about/`;
+const crumbs = [{ label: 'Home', href: '/' }, { label: 'About' }];
+const schema = [
+  breadcrumbNode(crumbs, pageUrl),
+  { '@type': 'AboutPage', '@id': `${pageUrl}#page`, url: pageUrl, name: 'About SpaceToReno', about: { '@id': `${SITE.url}/#organization` } },
+];
+---
+<BaseLayout
+  title="About SpaceToReno: Who Writes It and How It Works"
+  description="Who runs SpaceToReno, how its renovation guides are researched and checked, how it links to its sister businesses, and how it handles your details."
+  schema={schema}
+>
+  <div class="page-header">
+    <div class="wrap">
+      <Breadcrumbs items={crumbs} />
+      <span class="kicker">About</span>
+      <h1>About SpaceToReno</h1>
+      <p class="lede">A guide to renovating a home in Singapore: what to do, in what order, and what the rules say.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <article class="prose prose-narrow">
+      <h2>Who runs it</h2>
+      <p>
+        SpaceToReno is run by the team behind <a href="https://junktoclear.com.sg/">Junk to Clear</a>, a Singapore
+        company established in 2009 under SKAP Waste Management Pte. Ltd. Junk to Clear handles clear-outs and
+        disposal, and renovation work too. Its partner crews do the work, and Junk to Clear quotes, books and
+        answers for each job.
+      </p>
+      <p>
+        The same team runs sister sites: OurKampung, a guide to running your own home in Singapore, and
+        services for moving, cleaning, repairs, aircon and pest control. A guide links to one of them only at
+        the step that calls for it.
+      </p>
+
+      <h2>How we link to our own businesses</h2>
+      <ul>
+        <li>A guide links to Junk to Clear or a sister site only at a step that needs that service, such as getting quotes for the works or clearing a flat before hacking starts, and the sentence says it’s ours.</li>
+        <li>A guide links to our own businesses at most twice.</li>
+        <li>We never rank or review our own businesses against anyone else’s, and we don’t publish “best interior designer” or “best contractor” lists.</li>
+      </ul>
+
+      <h2>How the guides are researched</h2>
+      <ul>
+        <li>Rules come from the official source: HDB, BCA, URA, EMA, PUB, SCDF, NEA, the Consumers Association of Singapore (CASE) and Singapore Statutes Online. Each guide lists and links its sources.</li>
+        <li>Where something depends on your condo’s by-laws or your contract rather than the law, we say so and tell you to check.</li>
+        <li>We don’t publish prices, durations or statistics we can’t source. Where a guide talks about cost, it explains what drives it.</li>
+        <li>Each guide shows the date it was last checked. Rules change, and if a source says something different from a guide, the source is right.</li>
+      </ul>
+      <p>Guides are general information, not legal, engineering or financial advice.</p>
+
+      <EnquiryForm
+        id="enquiry"
+        heading="Planning a renovation? Tell us about it"
+        lede="Tell us about the home and the works. The team behind Junk to Clear, which handles renovations, will get back to you with a quote."
+        pageName="About"
+      />
+
+      <h2 id="privacy">Privacy</h2>
+      <p>
+        <strong>Analytics.</strong> SpaceToReno uses Google Analytics to count visits and see which guides help
+        people. It records the pages you view, how you arrived (from a search, for example), how far you scroll,
+        which links to other sites you click, and your device, browser and approximate location. It uses
+        first-party cookies to tell visits apart. It doesn’t collect your name or contact details. You can opt out
+        on any site with <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google’s opt-out browser add-on</a>.
+      </p>
+      <p>
+        <strong>Enquiries.</strong> If you send an enquiry, the form sends what you enter (your property type,
+        timing, the rooms or works, any details and budget range you add, your name and number) through FormSubmit,
+        the form service we use, to the team behind Junk to Clear. They use it only to reply to your enquiry and
+        arrange a quote, and don’t sell it. Google Analytics records that an enquiry was sent, not what was in it.
+      </p>
+      <p>
+        <strong>Your rights.</strong> Under Singapore’s Personal Data Protection Act you can ask to see or correct
+        the details you sent us, or withdraw your consent to our using them. Use the form below and choose
+        “A privacy request”.
+      </p>
+
+      <MessageForm />
+    </article>
+  </div>
+</BaseLayout>

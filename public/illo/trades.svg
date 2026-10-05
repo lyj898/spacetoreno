@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220">
+<path d="M46 126C36 70 94 30 164 30c72 0 124 34 120 96-4 58-64 78-128 78-58 0-100-24-110-78z" fill="#EDE6F3"/>
+  <ellipse cx="164" cy="184" rx="122" ry="7" fill="#DCD2E6"/>
+  <rect x="84" y="62" width="152" height="96" rx="10" fill="#FFFFFF"/>
+  <rect x="84" y="62" width="152" height="24" rx="10" fill="#3B2752"/><rect x="84" y="76" width="152" height="10" fill="#3B2752"/>
+  <circle cx="118" cy="118" r="18" fill="#F3CDB3"/><path d="M100 140a18 14 0 0 1 36 0z" fill="#6B4F8A"/>
+  <path d="M148 108h68M148 122h54M148 136h62" stroke="#A59FAB" stroke-width="4" stroke-linecap="round"/>
+  <rect x="64" y="170" width="38" height="16" rx="4" fill="#59606E"/><path d="M102 178h18" stroke="#59606E" stroke-width="4"/><path d="M74 170v-8M90 170v-8" stroke="#7F7887" stroke-width="4"/>
+  <path d="M146 186v-16h24v16" stroke="#7F7887" stroke-width="8" fill="none"/>
+  <path d="M232 186c-14 0-20-12-14-24 4 6 8 6 8 0 0-8 6-14 14-18-2 10 10 14 10 26 0 10-8 16-18 16z" fill="#F0A07E"/>
+  <path d="M234 186c-6 0-9-6-6-11 2 3 5 3 5-1 4 2 8 5 8 8 0 3-3 4-7 4z" fill="#F5D98B"/>
+</svg>

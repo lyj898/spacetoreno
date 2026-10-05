@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220">
+<path d="M46 126C36 70 94 30 164 30c72 0 124 34 120 96-4 58-64 78-128 78-58 0-100-24-110-78z" fill="#EDE6F3"/>
+  <ellipse cx="164" cy="184" rx="122" ry="7" fill="#DCD2E6"/>
+  <rect x="64" y="122" width="72" height="60" rx="3" fill="#D9A86C"/><path d="M64 140h72" stroke="#C4935A" stroke-width="3"/><rect x="92" y="122" width="16" height="20" fill="#F1E2C4"/>
+  <rect x="76" y="76" width="56" height="46" rx="3" fill="#C4935A"/><path d="M76 90h56" stroke="#9E6E3E" stroke-width="3"/>
+  <rect x="152" y="108" width="62" height="74" rx="10" fill="#6B4F8A"/>
+  <path d="M170 108v-12h26v12" stroke="#3B2752" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M164 124v46M202 124v46" stroke="#3B2752" stroke-width="4"/>
+  <circle cx="164" cy="184" r="5" fill="#2A2233"/><circle cx="202" cy="184" r="5" fill="#2A2233"/>
+  <path d="M234 160h24l-4 22h-16z" fill="#F0A07E"/>
+  <path d="M246 160c-4-16-14-24-24-26 2 12 12 22 24 26zM246 160c3-18 14-28 26-30-2 14-12 26-26 30zM246 160c0-14-1-26-3-34 7 8 8 22 3 34z" fill="#5FB592"/>
+</svg>

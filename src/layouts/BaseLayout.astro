@@ -1,0 +1,90 @@
+---
+// Self-hosted fonts: no request to Google Fonts, nothing render-blocking from a third party.
+import '@fontsource-variable/inter/index.css';
+import '@fontsource-variable/bricolage-grotesque/index.css';
+import '../styles/global.css';
+import Analytics from '../components/Analytics.astro';
+import { SITE, HUBS, HUB_ORDER, hubUrl } from '../lib/site';
+import { assertSeo } from '../lib/seo';
+import { baseGraph } from '../lib/schema';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  ogType?: 'website' | 'article';
+  /** Extra JSON-LD nodes for this page; merged into one @graph with the Organization and WebSite. */
+  schema?: Record<string, unknown>[];
+  noindex?: boolean;
+}
+
+const { title, description, canonicalPath, ogType = 'website', schema = [], noindex = false } = Astro.props;
+assertSeo(title, description, Astro.url.pathname);
+
+const canonicalURL = new URL(canonicalPath ?? Astro.url.pathname, Astro.site).href;
+const graph = { '@context': 'https://schema.org', '@graph': [...baseGraph(), ...schema] };
+const path = Astro.url.pathname;
+const year = new Date().getFullYear();
+---
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonicalURL} />}
+  <meta property="og:site_name" content={SITE.name} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:locale" content="en_SG" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#3B2752" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <script type="application/ld+json" set:html={JSON.stringify(graph)} />
+  <Analytics />
+  <slot name="head" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site">
+    <div class="wrap site-header-row">
+      <a class="logo" href="/" aria-label="SpaceToReno home">
+        <img src="/favicon.svg" alt="" width="30" height="30" />
+        <span>Space<em>To</em>Reno</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        {HUB_ORDER.map((key) => (
+          <a href={hubUrl(key)} aria-current={path.startsWith(hubUrl(key)) ? 'page' : undefined}>{HUBS[key].navLabel}</a>
+        ))}
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <slot />
+  </main>
+
+  <footer class="site">
+    <div class="footer-skyline" aria-hidden="true"></div>
+    <div class="wrap footer-grid">
+      <div class="footer-about">
+        <a class="logo" href="/"><span>Space<em>To</em>Reno</span></a>
+        <p>
+          A guide to renovating a home in Singapore, from the first plan to the end of the works. It’s run by
+          the team behind Junk to Clear, which also handles renovations, and every guide says so where it
+          matters. <a href="/about/">How SpaceToReno works</a>
+        </p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        {HUB_ORDER.map((key) => <a href={hubUrl(key)}>{HUBS[key].title.split(':')[0]}</a>)}
+        <a href="/guides/">All guides</a>
+        <a href="/about/">About</a>
+        <a href="/about/#privacy">Privacy</a>
+      </nav>
+    </div>
+    <div class="wrap footer-base">&copy; {year} SpaceToReno. Guides are general information, not legal or professional advice.</div>
+  </footer>
+</body>
+</html>

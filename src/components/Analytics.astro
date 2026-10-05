@@ -1,0 +1,30 @@
+---
+/**
+ * GA4. The coordinator creates the property and sets PUBLIC_GA4_ID; without it no third-party script loads.
+ *
+ * One custom event, and only one: `generate_lead`, sent by EnquiryForm.astro after FormSubmit confirms
+ * delivery. It is the property's only key event. Never send `form_start` or `form_submit` yourself:
+ * enhanced measurement already sends them, delivered or not. Keep enhanced measurement on, because its
+ * outbound-click event counts the readers a guide sends to Junk to Clear and the sister sites.
+ *
+ * The tag renders in production builds only, so `astro dev` never sends hits.
+ */
+import { GA4_ID } from '../lib/env';
+
+const measurementId = import.meta.env.PROD && GA4_ID ? GA4_ID : '';
+---
+
+{measurementId && (
+  <>
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`} />
+    <script is:inline define:vars={{ measurementId }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', measurementId);
+    </script>
+  </>
+)}

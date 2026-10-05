@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GuideCard from '../components/GuideCard.astro';
+import { HUBS, HUB_ORDER, hubUrl } from '../lib/site';
+import { allGuides, guidesForHub, urlFor } from '../lib/guides';
+
+const guides = await allGuides();
+const counts = Object.fromEntries(
+  await Promise.all(HUB_ORDER.map(async (key) => [key, (await guidesForHub(key)).length] as const))
+);
+const find = (slug: string) => guides.find((g) => g.id === slug);
+const startHere = ['renovation-stages', 'what-needs-approval', 'interior-designer-or-contractor', 'renovation-payment-schedule']
+  .map(find)
+  .filter((g) => g !== undefined);
+const stagesGuide = find('renovation-stages');
+---
+<BaseLayout
+  title="SpaceToReno: Renovating a Home in Singapore, Step by Step"
+  description="A plain-English guide to renovating an HDB flat, condo or landed home in Singapore: planning, permits, hiring, the works themselves, and each room."
+>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-kicker">Renovating in Singapore</span>
+        <h1>Renovate your home in the right order, with the rules checked.</h1>
+        <p class="lede">
+          Plain-English guides for HDB flats, condos and landed homes: what to plan, what needs approval, how to
+          hire and pay, and what happens while the works go on. Every rule links to the official source.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href={stagesGuide ? urlFor(stagesGuide) : hubUrl('planning')}>Start with the stages</a>
+          <a class="btn btn-outline" href="/guides/">See every guide</a>
+        </div>
+      </div>
+      <img class="hero-illo" src="/illo/hero.svg" alt="A cut-away flat being renovated: a worker tiles the bathroom, a homeowner studies a floor plan in the living room, and paint tins and a ladder stand in the bedroom." width="640" height="480" fetchpriority="high" />
+    </div>
+  </section>
+
+  <section class="section section-band">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>A renovation, from first idea to the end of the works</h2>
+        {stagesGuide && <a href={urlFor(stagesGuide)}>What happens at each stage</a>}
+      </div>
+      <figure class="illo-figure illo-wide">
+        <img src="/illo/timeline.svg" alt="The six stages of a renovation in order: 1 plan and budget, 2 hire a designer or contractor, 3 get approvals, 4 hacking and wet works, 5 carpentry, fittings and painting, 6 handover and defects. Approvals come before any work starts." width="1100" height="300" loading="lazy" />
+        <figcaption>The stages overlap a little on site, but approvals always come before any work starts.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="hub-grid">
+        {HUB_ORDER.map((key) => (
+          <a class="hub-card" href={hubUrl(key)}>
+            <img src={`/illo/${HUBS[key].illo}.svg`} alt="" width="320" height="220" loading="lazy" decoding="async" />
+            <div class="hub-card-body">
+              <h3>{HUBS[key].title.split(':')[0]}</h3>
+              <p>{HUBS[key].lede}</p>
+              <span class="cta">{counts[key]} {counts[key] === 1 ? 'guide' : 'guides'} →</span>
+            </div>
+          </a>
+        ))}
+        <a class="hub-card" href="/guides/">
+          <img src="/illo/stages.svg" alt="" width="320" height="220" loading="lazy" decoding="async" />
+          <div class="hub-card-body">
+            <h3>Every guide, in order</h3>
+            <p>All {guides.length} guides on one page, in the order a renovation happens: from the first plan to the end of the works.</p>
+            <span class="cta">See all guides →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Start here</h2>
+        <a href="/guides/">All guides</a>
+      </div>
+      <div class="guide-list">
+        {startHere.map((g) => (
+          <GuideCard href={urlFor(g)} title={g.data.title} summary={g.data.summary} kicker={HUBS[g.data.hub].title.split(':')[0]} illo={g.data.illo} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <h2 class="split-title">What SpaceToReno is</h2>
+        <p>
+          A guide, not a renovation company’s brochure. It explains how a renovation works in Singapore and what
+          the rules are, and links each rule to HDB, BCA, URA or the other official source. It doesn’t list or
+          rank interior designers or contractors.
+        </p>
+      </div>
+      <div>
+        <h2 class="split-title">Who runs it</h2>
+        <p>
+          The team behind Junk to Clear, a Singapore company that handles clear-outs and renovations. Where a
+          guide reaches the point where you’d want quotes, it says so and offers a form. Everything else is
+          the guide.
+        </p>
+        <a class="btn btn-outline" href="/about/">How SpaceToReno works</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

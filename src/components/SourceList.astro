@@ -1,0 +1,20 @@
+---
+interface Props {
+  sources: { label: string; url: string }[];
+  updated: string;
+}
+const { sources, updated } = Astro.props;
+---
+<section class="sources" aria-labelledby="sources">
+  <h2 id="sources">Sources</h2>
+  <p class="sources-note">
+    Renovation rules change. We checked this guide against these official pages on {updated}. If a source says
+    something different from this guide, the source is right, and your HDB branch, condo management or BCA has
+    the final word on your own home.
+  </p>
+  <ol>
+    {sources.map((s) => (
+      <li><a href={s.url} rel="noopener">{s.label}</a></li>
+    ))}
+  </ol>
+</section>

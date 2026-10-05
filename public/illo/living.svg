@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220">
+<path d="M46 126C36 70 94 30 164 30c72 0 124 34 120 96-4 58-64 78-128 78-58 0-100-24-110-78z" fill="#EDE6F3"/>
+  <ellipse cx="164" cy="184" rx="122" ry="7" fill="#DCD2E6"/>
+  <rect x="64" y="56" width="74" height="60" rx="3" fill="#DCE9F0"/><path d="M101 56v60M64 86h74" stroke="#FFFFFF" stroke-width="4"/>
+  <rect x="166" y="66" width="70" height="50" rx="3" fill="#D7F0E4"/><path d="M178 104l18-22 14 14 10-8 12 16z" fill="#5FB592"/>
+  <rect x="70" y="138" width="150" height="34" rx="12" fill="#6B4F8A"/>
+  <rect x="62" y="126" width="22" height="50" rx="10" fill="#3B2752"/><rect x="206" y="126" width="22" height="50" rx="10" fill="#3B2752"/>
+  <rect x="88" y="128" width="54" height="18" rx="8" fill="#CDBFDD"/><rect x="146" y="128" width="54" height="18" rx="8" fill="#CDBFDD"/>
+  <rect x="80" y="172" width="8" height="10" fill="#2A2233"/><rect x="202" y="172" width="8" height="10" fill="#2A2233"/>
+  <path d="M254 70v104M240 70h28l-6-20h-16z" stroke="#2A2233" stroke-width="4" fill="#F5D98B"/>
+</svg>

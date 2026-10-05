@@ -1,0 +1,179 @@
+---
+/**
+ * Enquiry form, to the family's enquiry standard (PORTFOLIO.md):
+ *
+ * - AJAX POST to FormSubmit (endpoint from PUBLIC_FORM_ENDPOINT, src/lib/env.ts), with "SpaceToReno", the
+ *   page title and the path in `_subject`, and a `_honey` honeypot.
+ * - FormSubmit answers 200 even when it refuses a submission (an unactivated form returns success "false"),
+ *   so the reply's `success` field is checked.
+ * - `generate_lead` fires once, only after FormSubmit confirms delivery.
+ * - If sending fails, it says so and keeps everything the visitor typed. No contact details are shown.
+ * - The notice under the button says where the details go (PDPA). If the fields, the inbox or who receives
+ *   the details change, update it and /about/#privacy in the same commit.
+ */
+import { ENQUIRY } from '../lib/site';
+import { FORM_ENDPOINT } from '../lib/env';
+
+interface Props {
+  heading: string;
+  lede?: string;
+  /** Page name for the email subject. */
+  pageName: string;
+  /** Anchor id for the section, so pages can link to it. */
+  id?: string;
+}
+
+const { heading, lede, pageName, id = 'enquiry' } = Astro.props;
+const config = { endpoint: FORM_ENDPOINT, event: ENQUIRY.event, pageName };
+---
+<section class="enquiry" id={id} aria-labelledby={`${id}-title`} data-enquiry>
+  <h2 id={`${id}-title`}>{heading}</h2>
+  <p class="enquiry-lede">
+    {lede ?? 'Tell us what you’re planning. The team behind Junk to Clear, which handles renovations, will get back to you with a quote.'}
+  </p>
+
+  <form class="enquiry-form" novalidate data-enquiry-form>
+    <div class="enquiry-grid">
+      <label>
+        <span>Property type</span>
+        <select name="Property type" required>
+          <option value="" selected disabled>Choose one</option>
+          {ENQUIRY.propertyTypes.map((type) => <option value={type}>{type}</option>)}
+        </select>
+      </label>
+      <label>
+        <span>When do you want to start?</span>
+        <select name="Timing" required>
+          <option value="" selected disabled>Choose one</option>
+          {ENQUIRY.timings.map((t) => <option value={t}>{t}</option>)}
+        </select>
+      </label>
+    </div>
+
+    <fieldset class="enquiry-scope">
+      <legend>Which rooms or works? <small>(choose any)</small></legend>
+      <div class="enquiry-checks">
+        {ENQUIRY.scopes.map((s) => (
+          <label class="check"><input type="checkbox" name="Scope" value={s} /> <span>{s}</span></label>
+        ))}
+      </div>
+    </fieldset>
+
+    <div class="enquiry-grid">
+      <label class="enquiry-wide">
+        <span>Anything else about the job? <small>(optional)</small></span>
+        <textarea name="Details" rows="3" placeholder="For example: a resale flat, keeping the kitchen cabinets, new flooring throughout."></textarea>
+      </label>
+      <label class="enquiry-wide">
+        <span>Budget range <small>(optional)</small></span>
+        <input name="Budget range" type="text" autocomplete="off" placeholder="If you have one in mind" />
+      </label>
+      <label>
+        <span>Your name</span>
+        <input name="Name" type="text" required autocomplete="name" />
+      </label>
+      <label>
+        <span>Phone or WhatsApp</span>
+        <input name="Phone or WhatsApp" type="tel" required inputmode="tel" autocomplete="tel" placeholder="e.g. 9123 4567" />
+      </label>
+    </div>
+
+    {/* Honeypot. People never fill it in; bots usually do. */}
+    <input class="enquiry-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+    <button class="btn btn-primary" type="submit" data-enquiry-submit>Send enquiry</button>
+    <p class="enquiry-status" role="status" aria-live="polite" data-enquiry-status hidden></p>
+
+    <p class="enquiry-notice">
+      Your details go to the team behind Junk to Clear, which runs SpaceToReno. They use them only to reply to
+      this enquiry and arrange a quote, and don’t sell them. <a href="/about/#privacy">How we handle your details</a>
+    </p>
+  </form>
+
+  <div class="enquiry-success" hidden data-enquiry-success tabindex="-1">
+    <p class="enquiry-success-title">Thank you. Your enquiry is on its way.</p>
+    <p>The team will contact you on the number you gave. You don’t need to do anything else.</p>
+  </div>
+</section>
+
+<script is:inline define:vars={{ config }}>
+  (function () {
+    var section = document.currentScript && document.currentScript.previousElementSibling;
+    if (!section || !section.hasAttribute('data-enquiry')) return;
+    var form = section.querySelector('[data-enquiry-form]');
+    var submit = section.querySelector('[data-enquiry-submit]');
+    var status = section.querySelector('[data-enquiry-status]');
+    var success = section.querySelector('[data-enquiry-success]');
+
+    function show(message, isError) {
+      status.textContent = message;
+      status.hidden = false;
+      status.classList.toggle('is-error', !!isError);
+    }
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var fd = new FormData(form);
+      var data = {};
+      fd.forEach(function (value, key) {
+        if (key !== 'Scope') data[key] = String(value).trim();
+      });
+      var scope = fd.getAll('Scope').map(String);
+
+      // Silently "succeed" for bots rather than telling them they were caught.
+      if (data._honey) { form.hidden = true; success.hidden = false; return; }
+      delete data._honey;
+
+      var digits = (data['Phone or WhatsApp'] || '').replace(/\D/g, '');
+      if (!data['Property type'] || !data.Timing || !data.Name || digits.length < 8) {
+        show('Please choose a property type and when you want to start, and add your name and a phone or WhatsApp number.', true);
+        return;
+      }
+
+      var page = window.location.pathname;
+      var payload = {
+        _subject: 'SpaceToReno enquiry: ' + config.pageName + ' (' + page + ')',
+        _template: 'table',
+        'Property type': data['Property type'],
+        Timing: data.Timing,
+        Scope: scope.length ? scope.join(', ') : 'Not given',
+        Details: data.Details || 'Not given',
+        'Budget range': data['Budget range'] || 'Not given',
+        Name: data.Name,
+        'Phone or WhatsApp': data['Phone or WhatsApp'],
+        Site: 'spacetoreno.com',
+        Page: window.location.origin + page,
+      };
+
+      submit.disabled = true;
+      show('Sending your enquiry…', false);
+
+      fetch(config.endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          return res.json();
+        })
+        .then(function (reply) {
+          var ok = reply && (reply.success === true || reply.success === 'true');
+          if (!ok) throw new Error((reply && reply.message) || 'rejected');
+          // The site's one key event, for genuine delivery only.
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', config.event, { form_id: 'spacetoreno_enquiry', property_type: payload['Property type'], page_path: page });
+          }
+          form.hidden = true;
+          success.hidden = false;
+          success.focus({ preventScroll: true });
+          success.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        })
+        .catch(function () {
+          // Keep everything they typed, so they can simply try again.
+          submit.disabled = false;
+          show('Sorry, your enquiry didn’t send. Everything you typed is still here: please try again in a few minutes.', true);
+        });
+    });
+  })();
+</script>

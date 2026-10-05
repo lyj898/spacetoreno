@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import { HUBS, HUB_ORDER, hubUrl } from '../../lib/site';
+import { allGuides, urlFor } from '../../lib/guides';
+
+const guides = await allGuides();
+---
+<BaseLayout
+  title="All Home Renovation Guides for Singapore | SpaceToReno"
+  description="Every SpaceToReno guide in one place: planning and budget, rules and permits, hiring, during the works, and renovating room by room in Singapore."
+>
+  <div class="page-header">
+    <div class="wrap">
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'All guides' }]} />
+      <span class="kicker">Guides</span>
+      <h1>All guides</h1>
+      <p class="lede">Every guide, in the order a renovation happens.</p>
+    </div>
+  </div>
+
+  {HUB_ORDER.map((key) => (
+    <section class="section section-tight">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>{HUBS[key].title.split(':')[0]}</h2>
+          <a href={hubUrl(key)}>Open this section</a>
+        </div>
+        <div class="guide-list">
+          {guides.filter((g) => g.data.hub === key).map((g) => (
+            <GuideCard href={urlFor(g)} title={g.data.title} summary={g.data.summary} illo={g.data.illo} />
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+</BaseLayout>

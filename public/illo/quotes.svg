@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220">
+<path d="M46 126C36 70 94 30 164 30c72 0 124 34 120 96-4 58-64 78-128 78-58 0-100-24-110-78z" fill="#EDE6F3"/>
+  <ellipse cx="164" cy="184" rx="122" ry="7" fill="#DCD2E6"/>
+  <rect x="70" y="50" width="88" height="120" rx="5" fill="#FFFFFF" stroke="#E6DCCB" stroke-width="2"/>
+  <path d="M82 70h44" stroke="#3B2752" stroke-width="6" stroke-linecap="round"/>
+  <path d="M82 88h44" stroke="#A59FAB" stroke-width="3.5" stroke-linecap="round"/><path d="M82 104h52" stroke="#A59FAB" stroke-width="3.5" stroke-linecap="round"/><path d="M82 120h60" stroke="#A59FAB" stroke-width="3.5" stroke-linecap="round"/><path d="M82 136h44" stroke="#A59FAB" stroke-width="3.5" stroke-linecap="round"/><rect x="132" y="60" width="88" height="120" rx="5" fill="#FFFFFF" stroke="#E6DCCB" stroke-width="2"/>
+  <path d="M144 80h44" stroke="#5FB592" stroke-width="6" stroke-linecap="round"/>
+  <path d="M144 98h52" stroke="#A59FAB" stroke-width="3.5" stroke-linecap="round"/><path d="M144 114h60" stroke="#A59FAB" stroke-width="3.5" stroke-linecap="round"/><path d="M144 130h44" stroke="#A59FAB" stroke-width="3.5" stroke-linecap="round"/><path d="M144 146h52" stroke="#A59FAB" stroke-width="3.5" stroke-linecap="round"/><rect x="194" y="50" width="88" height="120" rx="5" fill="#FFFFFF" stroke="#E6DCCB" stroke-width="2"/>
+  <path d="M206 70h44" stroke="#D9805C" stroke-width="6" stroke-linecap="round"/>
+  <path d="M206 88h60" stroke="#A59FAB" stroke-width="3.5" stroke-linecap="round"/><path d="M206 104h44" stroke="#A59FAB" stroke-width="3.5" stroke-linecap="round"/><path d="M206 120h52" stroke="#A59FAB" stroke-width="3.5" stroke-linecap="round"/><path d="M206 136h60" stroke="#A59FAB" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M68 116h204" stroke="#E3BE5E" stroke-width="16" stroke-opacity=".45" stroke-linecap="round"/>
+</svg>
