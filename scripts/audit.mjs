@@ -6,8 +6,8 @@ import { fileURLToPath } from 'node:url';
 
 const DIST = fileURLToPath(new URL('../dist/', import.meta.url));
 const SITE = 'https://spacetoreno.com';
-// Our own brands. A guide links to them at most twice (PORTFOLIO.md). Sister guides (OurKampung and the
-// rest) aren't brands and don't count.
+// Family service sites and partners. A guide links to them at most twice (PORTFOLIO.md). Sister guides
+// (OurKampung and the rest) don't count.
 const BRAND_HOSTS = [
   'junktoclear.com.sg',
   'hometomoved.com',

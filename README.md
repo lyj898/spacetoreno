@@ -1,8 +1,9 @@
 # spacetoreno.com
 
 A guide to **renovating a home in Singapore** (HDB flat, condo or landed), from the first plan to the end of the
-works. It's a guide, not a sales site: Junk to Clear sells renovation, and guides link to it only at the step where
-the reader wants quotes. Part of the JTC family; the family's rules are in `../jtc-family/PORTFOLIO.md` and the
+works. It's a guide, not a sales site. It's run by the OurKampung team (independence brief, 6 Oct 2026): enquiries go to
+the team, who pass them to a renovation partner, and guides link to Junk to Clear, a separate renovation and
+disposal company we refer jobs to (no fees), only where that's the reader's next step. Part of the OurKampung family; the family's rules are in `../jtc-family/PORTFOLIO.md` and the
 site's brief in `../jtc-family/briefs/spacetoreno.md`.
 
 Astro 7, static, GitHub Pages (deploys from `main` via `.github/workflows/deploy.yml`). The structure copies
@@ -47,8 +48,8 @@ Relocado's: hubs, guides, and an enquiry form.
   variable), set on 5 Oct 2026 to FormSubmit's alias for the family inbox. `src/lib/env.ts` falls back to the same
   alias, so no email address appears in the code or the pages.
 - Fields: property type, timing, rooms or works, details, optional budget range, name, phone or WhatsApp. The
-  subject carries "SpaceToReno", the page title and path. The PDPA notice says the details go to the team behind
-  Junk to Clear. If the fields or recipient change, update the notice and `/about/#privacy` in the same commit.
+  subject carries "SpaceToReno", the page title and path. The PDPA notice says the details go to the OurKampung team,
+  who pass them to the partner who'll quote for the job. If the fields or recipient change, update the notice and `/about/#privacy` in the same commit.
 - `generate_lead` fires once, only after FormSubmit returns `success`. On failure the form says so and keeps what
   the visitor typed. `MessageForm.astro` (corrections and privacy requests, on `/about/`) sends no GA4 event.
 

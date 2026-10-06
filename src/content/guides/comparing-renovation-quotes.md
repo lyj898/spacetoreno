@@ -9,7 +9,7 @@ illo: quotes
 summary: "Two quotes are only comparable if they price the same work. Give every firm the same written brief, ask for itemised quotes with materials and quantities, and line them up item by item. The cheapest total often just leaves things out."
 enquiry:
   heading: "Want a quote to compare? Tell us about the job"
-  lede: "Tell us about the home and the works. The team behind Junk to Clear, which handles renovations, will send you an itemised quote."
+  lede: "Tell us about the home and the works. The OurKampung team will pass your details to a renovation partner, who’ll send you an itemised quote."
 sources:
   - label: "Competition and Consumer Commission of Singapore — Fair Trading Practices for the Renovation Industry"
     url: "https://www.ccs.gov.sg/consumer-protection/legislation-and-guidelines/fair-trading-practices-for-the-renovation-industry/"

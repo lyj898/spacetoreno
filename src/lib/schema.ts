@@ -17,6 +17,7 @@ export function baseGraph(): Node[] {
       description: SITE.description,
       areaServed: { '@type': 'Country', name: 'Singapore' },
       knowsLanguage: 'en-SG',
+      parentOrganization: { '@type': 'Organization', name: 'OurKampung', url: 'https://ourkampung.com/' },
       knowsAbout: [
         'Home renovation in Singapore',
         'HDB renovation permits and rules',

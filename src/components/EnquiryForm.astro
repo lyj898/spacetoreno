@@ -29,7 +29,7 @@ const config = { endpoint: FORM_ENDPOINT, event: ENQUIRY.event, pageName };
 <section class="enquiry" id={id} aria-labelledby={`${id}-title`} data-enquiry>
   <h2 id={`${id}-title`}>{heading}</h2>
   <p class="enquiry-lede">
-    {lede ?? 'Tell us what you’re planning. The team behind Junk to Clear, which handles renovations, will get back to you with a quote.'}
+    {lede ?? 'Tell us what you’re planning. The OurKampung team will pass your details to a renovation partner, who’ll get back to you with a quote.'}
   </p>
 
   <form class="enquiry-form" novalidate data-enquiry-form>
@@ -85,8 +85,8 @@ const config = { endpoint: FORM_ENDPOINT, event: ENQUIRY.event, pageName };
     <p class="enquiry-status" role="status" aria-live="polite" data-enquiry-status hidden></p>
 
     <p class="enquiry-notice">
-      Your details go to the team behind Junk to Clear, which runs SpaceToReno. They use them only to reply to
-      this enquiry and arrange a quote, and don’t sell them. <a href="/about/#privacy">How we handle your details</a>
+      Your details go to the OurKampung team, who pass them to the partner who’ll quote for the job. They’re used
+      only for this enquiry and never sold. <a href="/about/#privacy">How we handle your details</a>
     </p>
   </form>
 

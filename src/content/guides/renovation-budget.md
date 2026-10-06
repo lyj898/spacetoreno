@@ -9,7 +9,7 @@ illo: budget
 summary: "We don’t publish price lists: they date quickly and every home differs. What we can say is what moves the price: how much is hacked and rebuilt, how much carpentry, which materials, what the rules require, and the costs outside the contract. Plan for all of them, and keep a contingency."
 enquiry:
   heading: "Want a quote for your home? Tell us about it"
-  lede: "The surest way to know what your renovation costs is an itemised quote. The team behind Junk to Clear, which handles renovations, will send you one."
+  lede: "The surest way to know what your renovation costs is an itemised quote. The OurKampung team will pass your details to a renovation partner, who’ll send you one."
 sources:
   - label: "HDB — Important Information on Renovations"
     url: "https://www.hdb.gov.sg/managing-my-home/renovation-and-maintenance/renovation/important-information-on-renovations"

@@ -71,4 +71,4 @@ If an older home has asbestos in its ceiling boards, partitions or roof, it must
 
 ## Clear out before the hacking starts
 
-Furniture, old appliances and built-in carpentry that you’re not keeping are easier to take away before the works than to work around. [Junk to Clear](https://junktoclear.com.sg/services/residential-waste-disposal-singapore/), the team behind SpaceToReno, clears homes before renovations, from single items to the whole flat.
+Furniture, old appliances and built-in carpentry that you’re not keeping are easier to take away before the works than to work around. [Junk to Clear](https://junktoclear.com.sg/services/residential-waste-disposal-singapore/), a renovation and disposal company we refer jobs to, clears homes before renovations, from single items to the whole flat.

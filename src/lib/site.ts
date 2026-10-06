@@ -4,7 +4,7 @@ export const SITE = {
   name: 'SpaceToReno',
   url: 'https://spacetoreno.com',
   description:
-    'A plain-English guide to renovating a home in Singapore, from the first plan to the end of the works, written by the team behind Junk to Clear.',
+    'A plain-English guide to renovating a home in Singapore, from the first plan to the end of the works, written by the OurKampung team.',
 } as const;
 
 export type HubKey = 'planning' | 'rules' | 'hiring' | 'during' | 'rooms';
@@ -98,7 +98,8 @@ export function guideUrl(hub: HubKey, slug: string): string {
 
 /**
  * The enquiry form (family rule, 30 Sep 2026: every family site except OurKampung takes enquiries on its own
- * FormSubmit form). The details go to the team behind Junk to Clear, which sells renovation. The form isn't a
+ * FormSubmit form). The details go to the OurKampung team, who pass them to the partner who'll quote (independence
+ * brief, 6 Oct 2026). The form isn't a
  * brand link, so it doesn't count towards the two-per-guide limit.
  */
 export const ENQUIRY = {

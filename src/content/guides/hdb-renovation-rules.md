@@ -9,7 +9,7 @@ illo: hdb
 summary: "In an HDB flat, every contractor must come from HDB’s Directory of Renovation Contractors, even for works that need no permit. Hacking walls, replacing floor tiles and replacing windows need a permit first, and some works, like removing structural walls, aren’t allowed at all."
 enquiry:
   heading: "Planning an HDB renovation? Tell us about it"
-  lede: "Tell us about the flat and the works. The team behind Junk to Clear, which handles renovations, will get back to you with a quote from an HDB-registered contractor."
+  lede: "Tell us about the flat and the works. The OurKampung team will pass your details to a renovation partner, who’ll get back to you with a quote."
 sources:
   - label: "HDB — Important Information on Renovations"
     url: "https://www.hdb.gov.sg/managing-my-home/renovation-and-maintenance/renovation/important-information-on-renovations"

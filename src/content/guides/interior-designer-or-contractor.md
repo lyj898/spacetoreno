@@ -9,7 +9,7 @@ illo: id-contractor
 summary: "An interior designer designs your home and manages the trades who build it. A renovation contractor builds what you’ve already decided. Neither is a licensed profession on its own, but in an HDB flat whoever carries out the works must be on HDB’s directory."
 enquiry:
   heading: "Planning a renovation? Tell us about it"
-  lede: "Whether you’ve a design in hand or need one, tell us about the home and the works. The team behind Junk to Clear, which handles renovations, will get back to you with a quote."
+  lede: "Whether you’ve a design in hand or need one, tell us about the home and the works. The OurKampung team will pass your details to a renovation partner, who’ll get back to you with a quote."
 sources:
   - label: "Competition and Consumer Commission of Singapore — Fair Trading Practices for the Renovation Industry"
     url: "https://www.ccs.gov.sg/consumer-protection/legislation-and-guidelines/fair-trading-practices-for-the-renovation-industry/"
@@ -68,4 +68,4 @@ Some points apply whoever you pick:
 - **Check the firm.** HDB registration, its business record and any complaints: see [checking a contractor before you sign](/hiring/checking-a-contractor/).
 - **Consider CaseTrust accreditation.** CaseTrust-accredited renovation businesses, ID firms among them, must protect your deposit with a performance bond, use CASE’s standard renovation contract and give a 12-month workmanship warranty.
 
-If you’d like a quote, [Junk to Clear](https://junktoclear.com.sg/services/renovation-services-singapore/), run by the same team as SpaceToReno, handles renovations; you can also use the form below.
+If you’d like a quote, [Junk to Clear](https://junktoclear.com.sg/services/renovation-services-singapore/), a renovation and disposal company we refer jobs to, handles renovations; you can also use the form below.
